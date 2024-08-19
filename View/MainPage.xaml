@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:FightClub.Model"
+             xmlns:vm="clr-namespace:FightClub.ViewModel"
+             x:DataType="vm:MainPageViewModel"
+             x:Class="FightClub.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid ColumnDefinitions="*,*"
+          RowDefinitions="Auto,Auto,Auto,Auto,*,Auto"
+          Padding="10">
+        <ActivityIndicator Grid.Row="0"
+                           Grid.RowSpan="6"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           IsVisible="{Binding IsBusy}"
+                           IsRunning="True"/>
+        <HorizontalStackLayout Grid.Row="0"
+                               Grid.ColumnSpan="2"
+                               HorizontalOptions="Center"
+                               Margin="10"
+                               IsVisible="{Binding IsNotBusy}">
+            <Image Source="mini_logo.png"
+                   HeightRequest="60"
+                   Margin="5"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Grid.Row="1"
+                               Grid.ColumnSpan="2"
+                               IsVisible="{Binding IsNotBusy}">
+
+            <Label Text="FILTRUJ:"/>
+            <Picker Margin="15,0,0,0"
+                    WidthRequest="145"
+                    SelectedIndex="{Binding SelectedFilterIndex}"
+                    ItemsSource="{Binding FilterByList}"/>
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout Grid.Row="2"
+                               Grid.ColumnSpan="2"
+                               IsVisible="{Binding IsNotBusy}">
+            <!--FILTERED BY NAME, SURNAME OR NICKNAME-->
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand"
+                                   Margin="5"
+                                   IsVisible="{Binding IsFilterByNotBeltVisible}">
+                <Entry MinimumWidthRequest="200"
+                       MaximumHeightRequest="38"
+                       Text="{Binding NameInput}"
+                       IsVisible="{Binding IsNameFilterButtonVisible}"/>
+                <Button HorizontalOptions="Center"
+                        Text="FILTRUJ"
+                        FontAttributes="Bold"
+                        Margin="10,5,0,5"
+                        IsVisible="{Binding IsNameFilterButtonVisible}"
+                        Command="{Binding FindFightersByNameCommand}"/>
+                <Entry MinimumWidthRequest="200"
+                       MaximumHeightRequest="38"
+                       Text="{Binding SurnameInput}"
+                       IsVisible="{Binding IsSurnameFilterButtonVisible}"/>
+                <Button HorizontalOptions="Center"
+                        Text="FILTRUJ"
+                        FontAttributes="Bold"
+                        Margin="10,5,0,5"
+                        IsVisible="{Binding IsSurnameFilterButtonVisible}"
+                        Command="{Binding FindFightersBySurnameCommand}"/>
+                <Entry MinimumWidthRequest="200"
+                       MaximumHeightRequest="38"
+                       Text="{Binding NicknameInput}"
+                       IsVisible="{Binding IsNicknameFilterButtonVisible}"/>
+                <Button HorizontalOptions="Center"
+                        Text="FILTRUJ"
+                        FontAttributes="Bold"
+                        Margin="10,5,0,5"
+                        IsVisible="{Binding IsNicknameFilterButtonVisible}"
+                        Command="{Binding FindFightersByNicknameCommand}"/>
+            </HorizontalStackLayout>
+
+
+            <!--FILTERED BY BELT AND WEIGHT-->
+            <HorizontalStackLayout WidthRequest="297"
+                                   HorizontalOptions="CenterAndExpand"
+                                   Margin="5"
+                                   IsVisible="{Binding IsFilterByBeltVisible}">
+                
+                <Picker WidthRequest="125"
+                        VerticalOptions="Center"
+                        SelectedItem="{Binding BeltInput}"
+                        ItemsSource="{Binding BeltsList}"/>
+                <Label Text="WAGA OD:"
+                       Margin="10,0,0,0"/>
+                <Entry MinimumWidthRequest="45"
+                       MaximumWidthRequest="45"
+                       MaximumHeightRequest="34"
+                       VerticalOptions="Center"
+                       Margin="5"
+                       Keyboard="Numeric"
+                       Text="{Binding WeightFromInput}"/>
+                <Label Text="DO:"/>
+                <Entry MinimumWidthRequest="45"
+                       MaximumWidthRequest="45"
+                       MaximumHeightRequest="34"
+                       VerticalOptions="Center"
+                       Margin="5"
+                       Keyboard="Numeric"
+                       Text="{Binding WeightToInput}"/>
+                <Button HorizontalOptions="Center"
+                        Text="FILTRUJ"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        Margin="10,5,0,5"
+                        IsVisible="{Binding IsFilterByBeltVisible}"
+                        Command="{Binding FindFightersByBeltAndWeightCommand}"/>
+            </HorizontalStackLayout>
+        </HorizontalStackLayout>
+
+
+        <Button Grid.Row="3"
+                Text="POBIERZ ZAWODNIKÓW"
+                MaximumWidthRequest="200"
+                FontAttributes="Bold"
+                Margin="5"
+                Command="{Binding GetFightersCommand}"
+                IsVisible="{Binding IsNotBusy}"/>
+
+        <CollectionView Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="4"
+                        
+                        IsVisible="{Binding IsNotBusy}"
+                        IsEnabled="{Binding IsNotBusy}"
+                        ItemsSource="{Binding Fighters}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Fighter">
+
+                        <VerticalStackLayout Spacing="5"
+                                             Padding="5">
+                                <Frame CornerRadius="8" 
+                                       BackgroundColor="#D3D3D3">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer CommandParameter="{Binding .}"
+                                                              Command="{Binding GoToFightersDetailsCommand, 
+                                                Source={RelativeSource AncestorType={x:Type vm:MainPageViewModel}}}"/>
+                                    </Frame.GestureRecognizers>
+                                    <HorizontalStackLayout>
+                                        <Frame CornerRadius="30"
+                                           Padding="0">
+                                            <Image Source="{Binding PhotoSource}"
+                                               HeightRequest="50"
+                                               WidthRequest="50"
+                                               Aspect="AspectFill"/>
+                                        </Frame>
+
+                                        <Label Text="{Binding Name}"
+                                               Margin="20,0,10,0"/>
+                                        <Label Text="{Binding Nickname}"
+                                               FontSize="12"
+                                               FontAttributes="Italic"
+                                               Margin="0,0,10,0"/>
+                                        <Label Text="{Binding Surname}"
+                                               FontAttributes="Bold"/>
+                                <Button Text="EDYTUJ"
+                                        TextColor="Gold"
+                                        Margin="10, 0, 0, 0"/>
+                                <Button Text="USUŃ"
+                                        TextColor="Red"/>
+                            </HorizontalStackLayout>
+                                </Frame>
+                        </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Text="DODAJ ZAWODNIKA"
+                MaximumWidthRequest="180"
+                FontAttributes="Bold"
+                Margin="5"
+                IsVisible="{Binding IsNotBusy}"
+                IsEnabled="{Binding IsNotBusy}"
+                Command="{Binding GetFightersCommand}"/>
+    </Grid>
+
+</ContentPage>

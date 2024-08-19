@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FightClub.View.FighterDetailsPage"
+             xmlns:vm="clr-namespace:FightClub.ViewModel"
+             x:DataType="vm:FighterDetailsViewModel"
+             xmlns:conv="clr-namespace:FightClub.Converters"
+             Title="ZAWODNIK">
+    <ContentPage.Resources>
+        <conv:BeltToImageConverter x:Key="BeltToImageConverter"/>
+    </ContentPage.Resources>
+    <VerticalStackLayout>
+        <Image Source="{Binding Fighter.PhotoSource}"
+               HeightRequest="150"
+               Aspect="AspectFit"/>
+        <Image Source="{Binding Fighter.Belt, Converter={StaticResource BeltToImageConverter}}"
+               HeightRequest="40"
+               WidthRequest="300"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Margin="10"
+               Aspect="AspectFill"/>
+
+        <Label Text="{Binding Fighter.Name}"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+        <Label Text="{Binding Fighter.Surname}"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+        
+   
+    </VerticalStackLayout>
+</ContentPage>
