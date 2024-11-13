@@ -2,6 +2,7 @@
 using FightClub.Services;
 using FightClub.Static;
 using FightClub.View;
+using System.Diagnostics.Metrics;
 
 namespace FightClub.ViewModel
 {
@@ -18,6 +19,7 @@ namespace FightClub.ViewModel
         private bool isSurnameFilterButtonVisible;
         private bool isNicknameFilterButtonVisible;
         private bool isBeltWeightFilterButtonVisible;
+        private bool editButtonsVisible;
 
         private string nameInput;
         private string nicknameInput;
@@ -25,31 +27,37 @@ namespace FightClub.ViewModel
         private Belt? beltInput;
         private int weightFromInput;
         private int weightToInput;
+        private string countedFighters;
+
 
         private List<Fighter> fighters;
+
         private List<string> filterByList;
-        private List<Belt> beltsList;
 
         public Command GetFightersCommand { get; }
         public Command GoToFightersDetailsCommand { get; }
+        public Command GoToAddFighterCommand { get; }
         public Command FindFightersByNameCommand { get; }
         public Command FindFightersBySurnameCommand { get; }
         public Command FindFightersByNicknameCommand { get; }
         public Command FindFightersByBeltAndWeightCommand { get; }
-
+        public Command HideFiltersCommand { get; }
+        public Command DeleteFighterCommand { get; }
 
         public MainPageViewModel(FightClubRepository repo)
         {
             _repo = repo;
             GetFightersCommand = new Command(async () => await GetFightersAsync());
             GoToFightersDetailsCommand = new Command<Fighter>(async (fighter) => await GoToFighterDetailsAsync(fighter));
+            GoToAddFighterCommand = new Command(async () => await GoToAddFighterAsync());
             FindFightersByNameCommand = new Command(async () => await GetFightersByNameAsync());
             FindFightersBySurnameCommand = new Command(async () => await GetFightersBySurnameAsync());
             FindFightersByNicknameCommand = new Command(async () => await GetFightersByNicknameAsync());
             FindFightersByBeltAndWeightCommand = new Command(async () => await GetFightersByBeltAndWeightAsync());
-            FilterByList = ElementsFromList.FilterByList;
-            BeltsList = ElementsFromList.BeltsList;
+            HideFiltersCommand = new Command(async () => await HideFiltersAsync());
+            DeleteFighterCommand = new Command<Fighter>(async (fighter) => await DeleteFighterAsync(fighter));
 
+            FilterByList = ElementsFromList.FilterByList;
 
             SelectedFilterIndex = -1;
             BeltInput = null;
@@ -90,6 +98,8 @@ namespace FightClub.ViewModel
                     if (value == 2)
                         IsNicknameFilterButtonVisible = true;
                 }
+
+                OnPropertyChanged(nameof(SelectedFilterIndex));
             }
         }
         public int SelectedBeltIndex
@@ -177,6 +187,18 @@ namespace FightClub.ViewModel
                 OnPropertyChanged(nameof(IsBeltWeightFilterButtonVisible));
             }
         }
+        public bool EditButtonsVisible
+        {
+            get => editButtonsVisible;
+            set
+            {
+                if (value == editButtonsVisible)
+                    return;
+
+                editButtonsVisible = value;
+                OnPropertyChanged(nameof(EditButtonsVisible));
+            }
+        }
         public List<Fighter> Fighters
         {
             get => fighters;
@@ -201,30 +223,29 @@ namespace FightClub.ViewModel
                 OnPropertyChanged(nameof(FilterByList));
             }
         }
-        public List<Belt> BeltsList
-        {
-            get => beltsList;
-            set
-            {
-                if (value == beltsList)
-                    return;
-
-                beltsList = value;
-                OnPropertyChanged(nameof(BeltsList));
-            }
-        }
+        
         private async Task GoToFighterDetailsAsync(Fighter fighter)
         {
             if (fighter == null)
                 return;
 
+            var notes = await _repo.GetNotesByFighterId(fighter.Id); 
+            
             await Shell.Current.GoToAsync($"{nameof(FighterDetailsPage)}", true,
                 new Dictionary<string, object>
                 {
-                    {"Fighter", fighter }
+                    {"Fighter", fighter },
+                    {"Notes", notes }
                 });
         }
-        private async Task GetFightersAsync()
+        private async Task GoToAddFighterAsync()
+        {
+            var c = $"{nameof(AddFighterPage)}";
+            
+            await Shell.Current.GoToAsync($"{nameof(AddFighterPage)}", true,
+                new Dictionary<string,object>());
+        }
+        public async Task GetFightersAsync()
         {
             if (IsBusy)
                 return;
@@ -233,11 +254,16 @@ namespace FightClub.ViewModel
             {
                 IsBusy = true;
                 Fighters = await _repo.GetFighters();
+                CountedFighters = $"Liczba zawodników/czek: {Fighters.Count}";
 
             }
             catch (Exception ex)
             {
-                await Shell.Current.DisplayAlert("Error", "Error with Get Fighters", "OK");
+                await Shell.Current.DisplayAlert("Błąd", "Nie udało się pobrać zawodników.", "OK");
+                
+                #if DEBUG
+                Console.WriteLine(ex.ToString());
+                #endif
             }
             finally
             {
@@ -253,10 +279,15 @@ namespace FightClub.ViewModel
             {
                 IsBusy = true;
                 Fighters = await _repo.FindFightersByName(NameInput);
+                CountedFighters = $"Liczba zawodników/czek: {Fighters.Count}";
             }
             catch (Exception ex)
             {
                 await Shell.Current.DisplayAlert("Error", "Error with Get Fighters", "OK");
+
+#if DEBUG
+                Console.WriteLine(ex.ToString());
+#endif
             }
             finally
             {
@@ -272,10 +303,14 @@ namespace FightClub.ViewModel
             {
                 IsBusy = true;
                 Fighters = await _repo.FindFightersBySurname(SurnameInput);
+                CountedFighters = $"Liczba zawodników/czek: {Fighters.Count}";
             }
             catch (Exception ex)
             {
                 await Shell.Current.DisplayAlert("Error", "Error with Get Fighters", "OK");
+#if DEBUG
+                Console.WriteLine(ex.ToString());
+#endif
             }
             finally
             {
@@ -291,10 +326,14 @@ namespace FightClub.ViewModel
             {
                 IsBusy = true;
                 Fighters = await _repo.FindFightersByNickname(NicknameInput);
+                CountedFighters = $"Liczba zawodników/czek: {Fighters.Count}";
             }
             catch (Exception ex)
             {
                 await Shell.Current.DisplayAlert("Error", "Error with Get Fighters", "OK");
+#if DEBUG
+                Console.WriteLine(ex.ToString());
+#endif
             }
             finally
             {
@@ -310,14 +349,32 @@ namespace FightClub.ViewModel
             {
                 IsBusy = true;
                 Fighters = await _repo.FindFightersByBeltAndWeight(BeltInput, WeightFromInput, WeightToInput);
+                CountedFighters = $"Liczba zawodników/czek: {Fighters.Count}";
             }
             catch (Exception ex)
             {
                 await Shell.Current.DisplayAlert("Error", "Error with Get Fighters", "OK");
+#if DEBUG
+                Console.WriteLine(ex.ToString());
+#endif
             }
             finally
             {
                 IsBusy = false;
+            }
+        }
+        private async Task HideFiltersAsync()
+        {
+            SelectedFilterIndex = -1;
+            await GetFightersAsync();
+        }
+        private async Task DeleteFighterAsync(Fighter fighter)
+        {
+            var result = await Shell.Current.DisplayAlert("USUWANIE ZAWODNIKA", $"Czy na pewno chcesz usunąć {fighter.Name} {fighter.Surname} z listy zawodników?", "TAK", "NIE");
+            if (result == true)
+            {
+                if (await _repo.DeleteFighter(fighter))
+                    await GetFightersAsync();
             }
         }
         public string NameInput
@@ -402,6 +459,18 @@ namespace FightClub.ViewModel
                 }
                 weightToInput = value;
                 OnPropertyChanged(nameof(WeightToInput));
+            }
+        }
+        public string CountedFighters
+        {
+            get => countedFighters;
+            set
+            {
+                if (countedFighters == value)
+                    return;
+
+                countedFighters = value;
+                OnPropertyChanged(nameof(CountedFighters));
             }
         }
 

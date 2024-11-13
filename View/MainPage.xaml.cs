@@ -4,12 +4,19 @@ namespace FightClub;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
+    private MainPageViewModel _vm;
     public MainPage(MainPageViewModel vm)
     {
         InitializeComponent();
         this.BindingContext = vm;
+
+        _vm = vm;
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        Task.Run(async () => await _vm.GetFightersAsync());
     }
 
 }

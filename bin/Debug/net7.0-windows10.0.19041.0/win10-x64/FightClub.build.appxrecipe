@@ -871,14 +871,50 @@
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\arrk.scale-100.JPEG">
       <PackagePath>arrk.scale-100.JPEG</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\black.scale-100.png">
-      <PackagePath>black.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\black0.scale-100.png">
+      <PackagePath>black0.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\blue.scale-100.png">
-      <PackagePath>blue.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\black1.scale-100.png">
+      <PackagePath>black1.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brown.scale-100.png">
-      <PackagePath>brown.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\black2.scale-100.png">
+      <PackagePath>black2.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\black3.scale-100.png">
+      <PackagePath>black3.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\black4.scale-100.png">
+      <PackagePath>black4.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\blue0.scale-100.png">
+      <PackagePath>blue0.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\blue1.scale-100.png">
+      <PackagePath>blue1.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\blue2.scale-100.png">
+      <PackagePath>blue2.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\blue3.scale-100.png">
+      <PackagePath>blue3.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\blue4.scale-100.png">
+      <PackagePath>blue4.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brown0.scale-100.png">
+      <PackagePath>brown0.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brown1.scale-100.png">
+      <PackagePath>brown1.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brown2.scale-100.png">
+      <PackagePath>brown2.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brown3.scale-100.png">
+      <PackagePath>brown3.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brown4.scale-100.png">
+      <PackagePath>brown4.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
@@ -898,11 +934,35 @@
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mini_logo.scale-100.png">
       <PackagePath>mini_logo.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple.scale-100.png">
-      <PackagePath>purple.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple0.scale-100.png">
+      <PackagePath>purple0.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\white.scale-100.png">
-      <PackagePath>white.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple1.scale-100.png">
+      <PackagePath>purple1.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple2.scale-100.png">
+      <PackagePath>purple2.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple3.scale-100.png">
+      <PackagePath>purple3.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple4.scale-100.png">
+      <PackagePath>purple4.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\white0.scale-100.png">
+      <PackagePath>white0.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\white1.scale-100.png">
+      <PackagePath>white1.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\white2.scale-100.png">
+      <PackagePath>white2.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\white3.scale-100.png">
+      <PackagePath>white3.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\white4.scale-100.png">
+      <PackagePath>white4.scale-100.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

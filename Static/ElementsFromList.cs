@@ -6,6 +6,7 @@ namespace FightClub.Static
     {
         public static List<string> FilterByList { get; set; }
         public static List<Belt> BeltsList { get; set; }
+        public static List<Stripe> StripeList { get; set; }
 
         static ElementsFromList()
         {
@@ -26,6 +27,14 @@ namespace FightClub.Static
                 Belt.Czarny,
             };
 
+            StripeList = new List<Stripe>()
+            {
+                Stripe.Zero,
+                Stripe.Jeden,
+                Stripe.Dwa,
+                Stripe.Trzy,
+                Stripe.Cztery
+            };
         }
     }
 }

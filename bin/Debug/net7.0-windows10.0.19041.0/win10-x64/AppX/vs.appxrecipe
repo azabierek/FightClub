@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\adrzab\source\repos\FightClub\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-08-16T10:29:47.113</Modified>
+      <Modified>2024-09-06T10:41:33.818</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-08-16T09:56:18.464</Modified>
+      <Modified>2024-09-06T10:27:40.197</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\FightClub.runtimeconfig.json">
       <PackagePath>FightClub.runtimeconfig.json</PackagePath>
-      <Modified>2024-08-14T13:13:46.174</Modified>
+      <Modified>2024-09-05T12:05:23.294</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\FightClub.dll">
       <PackagePath>FightClub.dll</PackagePath>
-      <Modified>2024-08-16T10:29:45.222</Modified>
+      <Modified>2024-09-06T10:41:30.471</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>FightClub.exe</PackagePath>
-      <Modified>2024-08-16T10:29:45.253</Modified>
+      <Modified>2024-09-06T10:41:30.568</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.7\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -923,7 +923,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\FightClub.deps.json">
       <PackagePath>FightClub.deps.json</PackagePath>
-      <Modified>2024-08-16T10:29:46.925</Modified>
+      <Modified>2024-09-06T10:41:33.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.86\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -943,23 +943,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-08-14T13:13:13.057</Modified>
+      <Modified>2024-09-05T12:05:20.110</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-08-14T13:13:13.092</Modified>
+      <Modified>2024-09-05T12:05:20.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-08-14T13:13:13.147</Modified>
+      <Modified>2024-09-05T12:05:20.158</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-08-14T13:13:13.196</Modified>
+      <Modified>2024-09-05T12:05:20.199</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-08-14T13:13:13.487</Modified>
+      <Modified>2024-09-05T12:05:20.346</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -975,235 +975,315 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-08-16T09:52:59.386</Modified>
+      <Modified>2024-09-05T12:05:20.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-08-16T09:53:00.043</Modified>
+      <Modified>2024-09-05T12:05:20.808</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-08-16T09:53:00.062</Modified>
+      <Modified>2024-09-05T12:05:20.826</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-08-16T09:53:00.075</Modified>
+      <Modified>2024-09-05T12:05:20.839</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-08-16T09:53:00.096</Modified>
+      <Modified>2024-09-05T12:05:20.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-08-16T09:53:00.186</Modified>
+      <Modified>2024-09-05T12:05:20.941</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.714</Modified>
+      <Modified>2024-09-05T12:05:20.559</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.720</Modified>
+      <Modified>2024-09-05T12:05:20.565</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.763</Modified>
+      <Modified>2024-09-05T12:05:20.585</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.738</Modified>
+      <Modified>2024-09-05T12:05:20.570</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.749</Modified>
+      <Modified>2024-09-05T12:05:20.575</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.646</Modified>
+      <Modified>2024-09-05T12:05:20.524</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.654</Modified>
+      <Modified>2024-09-05T12:05:20.529</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.708</Modified>
+      <Modified>2024-09-05T12:05:20.553</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.663</Modified>
+      <Modified>2024-09-05T12:05:20.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.673</Modified>
+      <Modified>2024-09-05T12:05:20.542</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.457</Modified>
+      <Modified>2024-09-05T12:05:20.458</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.497</Modified>
+      <Modified>2024-09-05T12:05:20.466</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.535</Modified>
+      <Modified>2024-09-05T12:05:20.472</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.545</Modified>
+      <Modified>2024-09-05T12:05:20.478</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.578</Modified>
+      <Modified>2024-09-05T12:05:20.487</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.585</Modified>
+      <Modified>2024-09-05T12:05:20.493</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.593</Modified>
+      <Modified>2024-09-05T12:05:20.498</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.640</Modified>
+      <Modified>2024-09-05T12:05:20.519</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.600</Modified>
+      <Modified>2024-09-05T12:05:20.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.622</Modified>
+      <Modified>2024-09-05T12:05:20.509</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.864</Modified>
+      <Modified>2024-09-05T12:05:20.656</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.873</Modified>
+      <Modified>2024-09-05T12:05:20.664</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.885</Modified>
+      <Modified>2024-09-05T12:05:20.673</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.902</Modified>
+      <Modified>2024-09-05T12:05:20.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.927</Modified>
+      <Modified>2024-09-05T12:05:20.708</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.814</Modified>
+      <Modified>2024-09-05T12:05:20.621</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.822</Modified>
+      <Modified>2024-09-05T12:05:20.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.831</Modified>
+      <Modified>2024-09-05T12:05:20.633</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.840</Modified>
+      <Modified>2024-09-05T12:05:20.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.854</Modified>
+      <Modified>2024-09-05T12:05:20.650</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.770</Modified>
+      <Modified>2024-09-05T12:05:20.590</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.780</Modified>
+      <Modified>2024-09-05T12:05:20.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.786</Modified>
+      <Modified>2024-09-05T12:05:20.601</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.794</Modified>
+      <Modified>2024-09-05T12:05:20.607</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.806</Modified>
+      <Modified>2024-09-05T12:05:20.616</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.935</Modified>
+      <Modified>2024-09-05T12:05:20.716</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.944</Modified>
+      <Modified>2024-09-05T12:05:20.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.955</Modified>
+      <Modified>2024-09-05T12:05:20.738</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.974</Modified>
+      <Modified>2024-09-05T12:05:20.754</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-08-16T09:53:00.020</Modified>
+      <Modified>2024-09-05T12:05:20.795</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\arrk.scale-100.JPEG">
       <PackagePath>arrk.scale-100.JPEG</PackagePath>
       <Modified>2024-08-16T07:17:32.918</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\black.scale-100.png">
-      <PackagePath>black.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\black0.scale-100.png">
+      <PackagePath>black0.scale-100.png</PackagePath>
       <Modified>2024-08-16T09:50:55.297</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\blue.scale-100.png">
-      <PackagePath>blue.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\black1.scale-100.png">
+      <PackagePath>black1.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:33:33.689</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\black2.scale-100.png">
+      <PackagePath>black2.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:33:24.205</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\black3.scale-100.png">
+      <PackagePath>black3.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:33:17.736</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\black4.scale-100.png">
+      <PackagePath>black4.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:33:07.643</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\blue0.scale-100.png">
+      <PackagePath>blue0.scale-100.png</PackagePath>
       <Modified>2024-08-16T09:50:09.473</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brown.scale-100.png">
-      <PackagePath>brown.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\blue1.scale-100.png">
+      <PackagePath>blue1.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:30:08.548</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\blue2.scale-100.png">
+      <PackagePath>blue2.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:30:01.892</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\blue3.scale-100.png">
+      <PackagePath>blue3.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:29:48.595</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\blue4.scale-100.png">
+      <PackagePath>blue4.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:29:40.588</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brown0.scale-100.png">
+      <PackagePath>brown0.scale-100.png</PackagePath>
       <Modified>2024-08-16T09:50:40.355</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brown1.scale-100.png">
+      <PackagePath>brown1.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:32:33.880</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brown2.scale-100.png">
+      <PackagePath>brown2.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:32:22.833</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brown3.scale-100.png">
+      <PackagePath>brown3.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:32:17.177</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\brown4.scale-100.png">
+      <PackagePath>brown4.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:32:05.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.308</Modified>
+      <Modified>2024-09-05T12:05:20.400</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.335</Modified>
+      <Modified>2024-09-05T12:05:20.423</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.375</Modified>
+      <Modified>2024-09-05T12:05:20.452</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.444</Modified>
+      <Modified>2024-09-05T12:05:20.484</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-08-16T09:52:59.613</Modified>
+      <Modified>2024-09-05T12:05:20.556</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mini_logo.scale-100.png">
       <PackagePath>mini_logo.scale-100.png</PackagePath>
       <Modified>2024-08-14T12:22:54.063</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple.scale-100.png">
-      <PackagePath>purple.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple0.scale-100.png">
+      <PackagePath>purple0.scale-100.png</PackagePath>
       <Modified>2024-08-16T09:50:26.285</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\white.scale-100.png">
-      <PackagePath>white.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple1.scale-100.png">
+      <PackagePath>purple1.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:31:23.378</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple2.scale-100.png">
+      <PackagePath>purple2.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:31:16.143</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple3.scale-100.png">
+      <PackagePath>purple3.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:31:08.831</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple4.scale-100.png">
+      <PackagePath>purple4.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:30:57.703</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\white0.scale-100.png">
+      <PackagePath>white0.scale-100.png</PackagePath>
       <Modified>2024-08-16T09:49:53.635</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\white1.scale-100.png">
+      <PackagePath>white1.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:28:41.435</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\white2.scale-100.png">
+      <PackagePath>white2.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:28:29.720</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\white3.scale-100.png">
+      <PackagePath>white3.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:28:21.701</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrzab\source\repos\FightClub\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\white4.scale-100.png">
+      <PackagePath>white4.scale-100.png</PackagePath>
+      <Modified>2024-09-05T07:28:11.805</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

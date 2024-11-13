@@ -3,32 +3,132 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FightClub.View.FighterDetailsPage"
              xmlns:vm="clr-namespace:FightClub.ViewModel"
+             xmlns:model="clr-namespace:FightClub.Model"
              x:DataType="vm:FighterDetailsViewModel"
              xmlns:conv="clr-namespace:FightClub.Converters"
              Title="ZAWODNIK">
     <ContentPage.Resources>
         <conv:BeltToImageConverter x:Key="BeltToImageConverter"/>
     </ContentPage.Resources>
+
     <VerticalStackLayout>
-        <Image Source="{Binding Fighter.PhotoSource}"
-               HeightRequest="150"
-               Aspect="AspectFit"/>
-        <Image Source="{Binding Fighter.Belt, Converter={StaticResource BeltToImageConverter}}"
-               HeightRequest="40"
-               WidthRequest="300"
+        <ActivityIndicator 
+            IsVisible="{Binding IsBusy}"/>
+        <VerticalStackLayout
+            IsVisible="{Binding IsNotBusy}">
+            <Frame BackgroundColor="WhiteSmoke"
+               BorderColor="Transparent">
+                <VerticalStackLayout>
+                    <Frame CornerRadius="90"
+                       HeightRequest="150"
+                       WidthRequest="150"
+                       Padding="0">
+                        <Image Source="{Binding Fighter.PhotoSource}"
+                                               Aspect="AspectFill"/>
+                    </Frame>
+
+                    <Label Text="{Binding Fighter.Name}"
+               VerticalOptions="Center" 
                HorizontalOptions="Center"
-               VerticalOptions="Center"
-               Margin="10"
-               Aspect="AspectFill"/>
+               FontAttributes="Bold"/>
 
-        <Label Text="{Binding Fighter.Name}"
+                    <Label Text="{Binding Fighter.Surname}"
                VerticalOptions="Center" 
-               HorizontalOptions="Center" />
+               HorizontalOptions="Center" 
+               FontAttributes="Bold"/>
 
-        <Label Text="{Binding Fighter.Surname}"
-               VerticalOptions="Center" 
-               HorizontalOptions="Center" />
-        
-   
+                    <Image Source="{Binding BeltImageString}"
+                       HeightRequest="40"
+                       WidthRequest="300"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Margin="10"
+                       Aspect="AspectFill"/>
+                </VerticalStackLayout>
+            </Frame>
+            <VerticalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="INFORMACJE O ZAWODNIKU"
+                       FontAttributes="Bold"/>
+                <CheckBox HorizontalOptions="Center"
+                          IsChecked="{Binding DetailsVisible}"/>
+                <VerticalStackLayout IsVisible="{Binding DetailsVisible}">
+                    <Label 
+                        Text="Waga (kg)"/>
+                    <Label 
+                        Text="{Binding Fighter.Weight}"
+                        HorizontalOptions="Center"/>
+                    <Label 
+                        Text="Rok urodzenia"/>
+                    <Label 
+                        Text="{Binding Fighter.BirthYear}"
+                        HorizontalOptions="Center"/>
+                    <Label 
+                        Text="Pierwszy trening"
+                        Margin="0,10,0,0"/>
+                    <Label 
+                        Text="{Binding Fighter.FirstShowUpYear}"
+                        HorizontalOptions="Center"/>
+
+                    <Label 
+                        Text="Kolor pasa"/>
+                    <Label 
+                        Text="{Binding Fighter.Belt}"
+                        HorizontalOptions="Center"/>
+
+                    <Label 
+                        Text="Ilość belek"/>
+                    <Label 
+                        Text="{Binding Fighter.Stripe}"
+                        HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+            <VerticalStackLayout 
+                BackgroundColor="WhiteSmoke"
+                Margin="0,10,0,0"
+                IsVisible="{Binding NotesVisible}">
+
+                <Label 
+                    Text="NOTATKI"
+                    FontSize="17"
+                    TextColor="Black"
+                    Margin="0,5,0,0"
+                    HorizontalTextAlignment="Center"
+                    FontAttributes="Bold"/>
+
+                <CollectionView
+                HorizontalOptions="Center"
+                ItemsSource="{Binding Notes}"
+                Margin="0,0,0,20"
+                    HeightRequest="270"
+                    MaximumHeightRequest="270">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate 
+                        x:DataType="model:Note">
+                            <Frame
+                            Margin="0,5,0,5"
+                            CornerRadius="0"
+                            BorderColor="WhiteSmoke">
+                                <HorizontalStackLayout>
+                                    <Label 
+                                    Text="{Binding InsertedDate, StringFormat='{}{0:dd.MM.yyyy HH:mm}'}"
+                                    Margin="0,0,10,0"
+                                    VerticalTextAlignment="Center"/>
+                                    <Label 
+                                    MaximumWidthRequest="220"
+                                    Text="{Binding NoteFromTheCoach}"
+                                    LineBreakMode="WordWrap"
+                                    MaxLines="0"/>
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <Button 
+                    Text="NOWA NOTATKA"
+                    WidthRequest="142"
+                    Command="{Binding AddNoteToTheFighterCommand}"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+
     </VerticalStackLayout>
 </ContentPage>

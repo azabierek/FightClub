@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FightClub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+fa97ae799849428e010513c3c6b1612dc8e08210")]
 [assembly: System.Reflection.AssemblyProductAttribute("FightClub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FightClub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

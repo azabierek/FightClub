@@ -1,4 +1,5 @@
-﻿using FightClub.Services;
+﻿using FightClub.Model;
+using FightClub.Services;
 using FightClub.View;
 using FightClub.ViewModel;
 using Microsoft.Extensions.Logging;
@@ -20,11 +21,16 @@ public static class MauiProgram
 
 		builder.Services.AddSingleton<FightClubRepository>();
 
+		//VIEWMODELS
 		builder.Services.AddSingleton<MainPageViewModel>();
 		builder.Services.AddTransient<FighterDetailsViewModel>();
+		builder.Services.AddTransient<AddFighterViewModel>();
 
+
+		//PAGES (VIEWS)
 		builder.Services.AddSingleton<MainPage>();
         builder.Services.AddTransient<FighterDetailsPage>();
+        builder.Services.AddTransient<AddFighterPage>();
 
 
 #if DEBUG

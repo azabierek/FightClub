@@ -12,9 +12,9 @@
     public enum Stripe
     {
         Zero,
-        One,
-        Two,
-        Three,
-        Four
+        Jeden,
+        Dwa,
+        Trzy,
+        Cztery
     }
 }

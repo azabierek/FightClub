@@ -9,16 +9,14 @@ namespace FightClub.Services
         private LiteDatabase _db;
         public FightClubRepository() 
         {
-            
-            _db = new LiteDatabase(@"C:\Users\adrzab\Desktop\FightClub.db");
-            
-            SeedData.SeedFightersData(_db);
+            var dbPath = Path.Combine(FileSystem.AppDataDirectory, "FightClub.db");
+            _db = new LiteDatabase(dbPath);
+            _db.SeedFightersData();
         }
         public Task<Fighter> FindFighterById(int id)
         {
             throw new NotImplementedException();
         }
-
         public async Task<List<Fighter>> FindFightersByName(string nameInput)
         {
             var list = new List<Fighter>();
@@ -32,7 +30,7 @@ namespace FightClub.Services
 
                     list = _db.GetCollection<Fighter>("Fighter").
                             Query().
-                            Where(x => x.Name.ToUpper().StartsWith(name)).
+                            Where(x => x.Name.ToUpper().Contains(name)).
                             ToList();
                 }
 
@@ -40,7 +38,6 @@ namespace FightClub.Services
 
             return list;
         }
-
         public async Task<List<Fighter>> FindFightersByNickname(string nicknameInput)
         {
             var list = new List<Fighter>();
@@ -86,7 +83,6 @@ namespace FightClub.Services
 
             return list;
         }
-
         public async Task<List<Fighter>> FindFightersBySurname(string surnameInput)
         {
             var list = new List<Fighter>();
@@ -100,7 +96,7 @@ namespace FightClub.Services
 
                     list = _db.GetCollection<Fighter>("Fighter").
                             Query().
-                            Where(x => x.Surname.ToUpper().StartsWith(surname)).
+                            Where(x => x.Surname.ToUpper().Contains(surname)).
                             ToList();
                 }
 
@@ -108,12 +104,10 @@ namespace FightClub.Services
 
             return list;
         }
-
         public Task<IEnumerable<Fighter>> FindFightersByBelt(Belt belt)
         {
             throw new NotImplementedException();
         }
-
         public async Task<List<Fighter>> GetFighters()
         {
             var returnFighters = new List<Fighter>();
@@ -128,7 +122,68 @@ namespace FightClub.Services
                     returnFighters.Add(fighter);
 
             });
+
             return returnFighters;
+        }
+        public async Task<bool> AddFighter(Fighter fighter, Note firstNote)
+        {
+            var result = false;
+            try
+            {
+                await Task.Run(() =>
+                {
+                    var id = _db.GetCollection<Fighter>("Fighter")
+                         .Insert(fighter);
+
+                    firstNote.IdFighter = id;
+                    
+                    var note = _db.GetCollection<Note>("Note")
+                        .Insert(firstNote);
+
+                    result = true;
+                });
+            }
+            catch (Exception)
+            {
+                result = false;
+            }
+            return result;
+
+        }
+        public async Task<IEnumerable<Note>> GetNotesByFighterId(int fighterId)
+        {
+            var notes = new List<Note>();
+
+            await Task.Run(() =>
+            {
+                notes = _db.GetCollection<Note>("Note")
+                .Query()
+                .Where(x => x.IdFighter == fighterId)
+                .OrderByDescending(x=>x.InsertedDate)
+                .ToList();
+            });
+
+            return notes;
+        }
+        public async Task<bool> DeleteFighter(Fighter fighter)
+        {
+            var result = false;
+            await Task.Run(() =>
+            {
+                result = _db.GetCollection<Fighter>("Fighter").Delete(fighter.Id);
+            });
+
+            return result;
+        }
+
+        public async Task<bool> AddNoteToFighter(Note note, Fighter fighter)
+        {
+            await Task.Run(() =>
+            {
+
+            });
+            _db.GetCollection<Note>("Note").Insert(note);
+            return true;
         }
     }
 }

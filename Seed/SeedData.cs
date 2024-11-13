@@ -5,10 +5,13 @@ namespace FightClub.Seed
 {
     public static class SeedData
     {
-        public static void SeedFightersData(LiteDatabase db)
+        public static void SeedFightersData(this LiteDatabase db)
         {
             var fighters = db.GetCollection<Fighter>("Fighter");
             fighters.DeleteAll();
+
+            var notes = db.GetCollection<Note>("Note");
+            notes.DeleteAll();
             
             var Ads = new Fighter()
             {
@@ -35,9 +38,33 @@ namespace FightClub.Seed
                 PhotoSource = "arrk.JPEG"
             };
 
-            fighters.Insert(Ads);
-            fighters.Insert(Arek);
+            var idAds = fighters.Insert(Ads);
+            var idArek = fighters.Insert(Arek);
 
+            var noteAds1 = new Note()
+            {
+                InsertedDate = DateTime.Now.AddDays(-2),
+                NoteFromTheCoach = "Do poprawy rozpoczynanie walki.",
+                IdFighter = idAds
+            };
+
+            var noteAds2 = new Note()
+            {
+                InsertedDate = DateTime.Now.AddDays(-1),
+                NoteFromTheCoach = "Waleczne serce.",
+                IdFighter = idAds
+            };
+
+            var noteArek = new Note()
+            {
+                InsertedDate = DateTime.Now.AddHours(-20),
+                NoteFromTheCoach = "Maszyna do zabijania, potwór połówki i nie chodzi tu o wóde.",
+                IdFighter = idArek
+            };
+
+            notes.Insert(noteAds1);
+            notes.Insert(noteAds2);
+            notes.Insert(noteArek);
         }
     }
 }
