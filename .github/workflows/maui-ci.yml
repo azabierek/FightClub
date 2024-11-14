@@ -59,14 +59,14 @@ jobs:
     # 8. Uruchomienie symulatora iOS (np. iPhone SE)
     - name: Boot iOS simulator
       run: |
-        xcrun simctl boot "iPhone SE (2nd generation)"  # Włączenie symulatora iPhone SE
+        xcrun simctl boot "iPhone SE (3rd generation)"  # Włączenie symulatora iPhone SE
         sleep 30  # Poczekaj chwilę, aż symulator się uruchomi
 
 
-# 9. Uruchomienie testów UI na symulatorze iPhone SE (2nd generation)
+# 9. Uruchomienie testów UI na symulatorze iPhone SE (3rd generation)
     - name: Run UI tests on iOS Simulator
       run: |
         # Sprawdzenie dostępnych symulatorów iOS
         xcrun simctl list devices
         # Uruchomienie testów na wybranym urządzeniu
-        dotnet maui test --target ios --device "iPhone SE (2nd generation)"
+        dotnet maui test --target ios --device "iPhone SE (3rd generation)"
