@@ -64,4 +64,5 @@ jobs:
         # Sprawdzenie dostępnych symulatorów iOS
         xcrun simctl list devices
         # Uruchomienie testów na wybranym urządzeniu
+        dotnet tool install -g Microsoft.Maui.Cli
         dotnet maui test --target ios --device "iPhone SE (3rd generation)"
