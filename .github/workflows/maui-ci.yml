@@ -27,6 +27,8 @@ jobs:
     - name: Install .NET MAUI iOS workload
       run: |
         dotnet workload install maui-ios  # Instalacja workloadu iOS
+        dotnet workload install maccatalyst  # Instalacja workloadu MacCatalyst
+        dotnet workload install android  # Instalacja workloadu Android
 
     - name: Install .NET MAUI MacCatalyst workload
       run: |
