@@ -57,7 +57,10 @@ jobs:
         dotnet build FightClub.csproj -t:Build -f:net7.0-ios
 
 
-    # 7. Uruchomienie testów UI na symulatorze iPhone SE (2nd generation)
+# 7. Uruchomienie testów UI na symulatorze iPhone SE (2nd generation)
     - name: Run UI tests on iOS Simulator
       run: |
+        # Sprawdzenie dostępnych symulatorów iOS
+        xcrun simctl list devices
+        # Uruchomienie testów na wybranym urządzeniu
         dotnet maui test --target ios --device "iPhone SE (2nd generation)"
