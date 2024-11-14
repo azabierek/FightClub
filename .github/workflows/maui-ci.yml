@@ -51,13 +51,19 @@ jobs:
       run: |
         dotnet restore
 
-    # 5. Budowanie aplikacji na iOS
+    # 7. Budowanie aplikacji na iOS
     - name: Build the application for iOS
       run: |
         dotnet build FightClub.csproj -t:Build -f:net7.0-ios
 
+    # 8. Uruchomienie symulatora iOS (np. iPhone SE)
+    - name: Boot iOS simulator
+      run: |
+        xcrun simctl boot "iPhone SE (2nd generation)"  # Włączenie symulatora iPhone SE
+        sleep 30  # Poczekaj chwilę, aż symulator się uruchomi
 
-# 7. Uruchomienie testów UI na symulatorze iPhone SE (2nd generation)
+
+# 9. Uruchomienie testów UI na symulatorze iPhone SE (2nd generation)
     - name: Run UI tests on iOS Simulator
       run: |
         # Sprawdzenie dostępnych symulatorów iOS
