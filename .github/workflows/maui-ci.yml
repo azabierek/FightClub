@@ -21,7 +21,7 @@ jobs:
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '8.0.x'  # Ustawienie wersji .NET MAUI (możesz użyć wersji 7.0.x lub 8.0.x)
+        dotnet-version: '7.0.x'  # Ustawienie wersji .NET MAUI (możesz użyć wersji 7.0.x lub 8.0.x)
 
     # 3. Instalacja wymaganych workloadów .NET MAUI (iOS, MacCatalyst, Android)
     - name: Install .NET MAUI iOS, MacCatalyst, and Android workloads
