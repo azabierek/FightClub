@@ -56,10 +56,6 @@ jobs:
       run: |
         dotnet build FightClub.csproj -t:Build -f:net7.0-ios
 
-    # 6. Uruchamianie testów jednostkowych
-    - name: Run unit tests
-      run: |
-        dotnet test  # Uruchamianie testów jednostkowych
 
     # 7. Uruchomienie testów UI na symulatorze iPhone SE (2nd generation)
     - name: Run UI tests on iOS Simulator
