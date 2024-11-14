@@ -59,10 +59,12 @@ jobs:
 
 
 # 9. Uruchomienie testów UI na symulatorze iPhone SE (3rd generation)
+    - name: Add NuGet source for Microsoft MAUI
+      run: |
+        dotnet nuget add source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-5/nuget/v3/index.json --name Microsoft
+
     - name: Run UI tests on iOS Simulator
       run: |
-        # Sprawdzenie dostępnych symulatorów iOS
-        xcrun simctl list devices
         # Uruchomienie testów na wybranym urządzeniu
         dotnet tool install -g Microsoft.Maui.Cli
         dotnet maui test --target ios --device "iPhone SE (3rd generation)"
