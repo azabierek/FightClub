@@ -20,7 +20,11 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '7.0.x'  # Ustaw wersję .NET MAUI
-
+        
+    - name: Install .NET MAUI iOS workload
+      run: |
+        dotnet workload install maui-ios  # Instalacja workloadu iOS
+        
     - name: Install dependencies
       run: |
         dotnet restore
