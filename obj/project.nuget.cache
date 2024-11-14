@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OlDd8ULWe9k=",
+  "dgSpecHash": "cQOHlSk32nE=",
   "success": true,
   "projectFilePath": "C:\\Users\\adrzab\\source\\repos\\FightClub\\FightClub.csproj",
   "expectedPackageFiles": [
@@ -104,6 +104,14 @@
     "C:\\Users\\adrzab\\.nuget\\packages\\xamarin.kotlin.stdlib.jdk8\\1.7.20.1\\xamarin.kotlin.stdlib.jdk8.1.7.20.1.nupkg.sha512",
     "C:\\Users\\adrzab\\.nuget\\packages\\xamarin.kotlinx.coroutines.android\\1.6.4.1\\xamarin.kotlinx.coroutines.android.1.6.4.1.nupkg.sha512",
     "C:\\Users\\adrzab\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.6.4.1\\xamarin.kotlinx.coroutines.core.jvm.1.6.4.1.nupkg.sha512",
+    "C:\\Users\\adrzab\\.nuget\\packages\\microsoft.maui.controls.runtime.ios\\7.0.101\\microsoft.maui.controls.runtime.ios.7.0.101.nupkg.sha512",
+    "C:\\Users\\adrzab\\.nuget\\packages\\microsoft.maui.essentials.ref.ios\\7.0.101\\microsoft.maui.essentials.ref.ios.7.0.101.nupkg.sha512",
+    "C:\\Users\\adrzab\\.nuget\\packages\\microsoft.maui.core.ref.ios\\7.0.101\\microsoft.maui.core.ref.ios.7.0.101.nupkg.sha512",
+    "C:\\Users\\adrzab\\.nuget\\packages\\microsoft.ios.ref\\16.4.7142\\microsoft.ios.ref.16.4.7142.nupkg.sha512",
+    "C:\\Users\\adrzab\\.nuget\\packages\\microsoft.maui.controls.ref.ios\\7.0.101\\microsoft.maui.controls.ref.ios.7.0.101.nupkg.sha512",
+    "C:\\Users\\adrzab\\.nuget\\packages\\microsoft.maui.essentials.runtime.ios\\7.0.101\\microsoft.maui.essentials.runtime.ios.7.0.101.nupkg.sha512",
+    "C:\\Users\\adrzab\\.nuget\\packages\\microsoft.ios.runtime.iossimulator-x64\\16.4.7142\\microsoft.ios.runtime.iossimulator-x64.16.4.7142.nupkg.sha512",
+    "C:\\Users\\adrzab\\.nuget\\packages\\microsoft.maui.core.runtime.ios\\7.0.101\\microsoft.maui.core.runtime.ios.7.0.101.nupkg.sha512",
     "C:\\Users\\adrzab\\.nuget\\packages\\microsoft.maui.controls.ref.maccatalyst\\7.0.101\\microsoft.maui.controls.ref.maccatalyst.7.0.101.nupkg.sha512",
     "C:\\Users\\adrzab\\.nuget\\packages\\microsoft.maccatalyst.runtime.maccatalyst-arm64\\16.4.7142\\microsoft.maccatalyst.runtime.maccatalyst-arm64.16.4.7142.nupkg.sha512",
     "C:\\Users\\adrzab\\.nuget\\packages\\microsoft.maccatalyst.runtime.maccatalyst-x64\\16.4.7142\\microsoft.maccatalyst.runtime.maccatalyst-x64.16.4.7142.nupkg.sha512",

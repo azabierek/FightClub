@@ -21,48 +21,31 @@ jobs:
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '7.0.x'  # Ustawienie wersji .NET MAUI (możesz też użyć '8.0.x' jeśli preferujesz nowszą wersję)
+        dotnet-version: '8.0.x'  # Ustawienie wersji .NET MAUI (możesz użyć wersji 7.0.x lub 8.0.x)
 
-    # 3. Instalacja wymaganych workloadów .NET MAUI
-    - name: Install .NET MAUI iOS workload
+    # 3. Instalacja wymaganych workloadów .NET MAUI (iOS, MacCatalyst, Android)
+    - name: Install .NET MAUI iOS, MacCatalyst, and Android workloads
       run: |
         dotnet workload install maui-ios  # Instalacja workloadu iOS
-
-    - name: Install .NET MAUI MacCatalyst workload
-      run: |
         dotnet workload install maccatalyst  # Instalacja workloadu MacCatalyst
+        dotnet workload install android  # Instalacja workloadu Android
 
-    # 4. Instalacja narzędzi Xcode (w tym Command Line Tools)
-    - name: Install Xcode Command Line Tools
-      run: |
-        sudo xcode-select --install
-
-    # 5. Wypisanie wersji Xcode, dotnet i simctl dla diagnostyki
-    - name: Diagnostic info
-      run: |
-        echo "Xcode version:"
-        xcodebuild -version
-        echo "dotnet version:"
-        dotnet --version
-        echo "Simulators:"
-        xcrun simctl list devices
-
-    # 6. Przywracanie zależności
+    # 4. Przywracanie zależności
     - name: Install dependencies
       run: |
         dotnet restore
 
-    # 7. Budowanie aplikacji
-    - name: Build the application
+    # 5. Budowanie aplikacji na iOS
+    - name: Build the application for iOS
       run: |
-        dotnet build
+        dotnet build MyMauiApp.csproj -t:Build -f:net7.0-ios
 
-    # 8. Uruchomienie testów jednostkowych
+    # 6. Uruchamianie testów jednostkowych
     - name: Run unit tests
       run: |
         dotnet test  # Uruchamianie testów jednostkowych
 
-    # 9. Uruchomienie testów UI na symulatorze iPhone SE (2nd generation)
+    # 7. Uruchomienie testów UI na symulatorze iPhone SE (2nd generation)
     - name: Run UI tests on iOS Simulator
       run: |
-        xcodebuild -scheme "MyMauiApp" -destination 'platform=iOS Simulator,name=iPhone SE (2nd generation)' clean build
+        dotnet maui test --target ios --device "iPhone SE (2nd generation)"
