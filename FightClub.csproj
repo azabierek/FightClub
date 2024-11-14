@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-ios;net7.0-maccatalyst;net7.0-android33.0</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net7.0-maccatalyst;net7.0-android33.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
@@ -22,7 +21,7 @@
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">10.3</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">16.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
@@ -30,12 +29,13 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+	<PropertyGroup>
+	  <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.png" />
-		<MauiIcon Include="Resources\AppIcon\appicon4.svg" />
-		<MauiIcon Include="Resources\AppIcon\appiconfg.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-		<MauiIcon Include="Resources\AppIcon\appicon23.svg" />
 		<MauiSplashScreen Include="Resources\Splash\splash.svg">
 		  <Color>#512BD4</Color>
 		  <ForegroundFile>Resources\AppIcon\appiconfg.svg</ForegroundFile>
@@ -88,10 +88,6 @@
 	  <None Remove="Photos\adsq.JPEG" />
 	  <None Remove="Photos\arrk.JPEG" />
 	  <None Remove="Resources\AppIcon\appicon.png" />
-	  <None Remove="Resources\AppIcon\appicon23.svg" />
-	  <None Remove="Resources\AppIcon\appicon3.svg" />
-	  <None Remove="Resources\AppIcon\appicon4.svg" />
-	  <None Remove="Resources\AppIcon\appicon54.png" />
 	  <None Remove="Resources\Images\mini_logo.png" />
 	  <None Remove="Resources\Splash\splash.svg" />
 	</ItemGroup>
@@ -122,7 +118,6 @@
 	  <MauiImage Include="Contents\white2.png" />
 	  <MauiImage Include="Contents\white3.png" />
 	  <MauiImage Include="Contents\white4.png" />
-	  <MauiIcon Include="Resources\AppIcon\appicon3.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -132,6 +127,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="View\AddFighterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\EditFighterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\FighterDetailsPage.xaml">
@@ -148,9 +146,6 @@
 	<ItemGroup>
 	  <MauiImage Include="Photos\adsq.JPEG" />
 	  <MauiImage Include="Photos\arrk.JPEG" />
-	  <MauiIcon Include="Resources\AppIcon\appicon54.png">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </MauiIcon>
 	</ItemGroup>
 
 </Project>

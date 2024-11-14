@@ -25,12 +25,15 @@ public static class MauiProgram
 		builder.Services.AddSingleton<MainPageViewModel>();
 		builder.Services.AddTransient<FighterDetailsViewModel>();
 		builder.Services.AddTransient<AddFighterViewModel>();
+		builder.Services.AddTransient<EditFighterViewModel>();
 
 
 		//PAGES (VIEWS)
 		builder.Services.AddSingleton<MainPage>();
         builder.Services.AddTransient<FighterDetailsPage>();
         builder.Services.AddTransient<AddFighterPage>();
+        builder.Services.AddTransient<EditFighterPage>();
+
 
 
 #if DEBUG

@@ -6,7 +6,7 @@
              xmlns:model="clr-namespace:FightClub.Model"
              x:DataType="vm:FighterDetailsViewModel"
              xmlns:conv="clr-namespace:FightClub.Converters"
-             Title="ZAWODNIK">
+             Title="ZAWODNIK / ZAWODNICZKA">
     <ContentPage.Resources>
         <conv:BeltToImageConverter x:Key="BeltToImageConverter"/>
     </ContentPage.Resources>
@@ -26,12 +26,10 @@
                         <Image Source="{Binding Fighter.PhotoSource}"
                                                Aspect="AspectFill"/>
                     </Frame>
-
                     <Label Text="{Binding Fighter.Name}"
                VerticalOptions="Center" 
                HorizontalOptions="Center"
                FontAttributes="Bold"/>
-
                     <Label Text="{Binding Fighter.Surname}"
                VerticalOptions="Center" 
                HorizontalOptions="Center" 
@@ -46,11 +44,23 @@
                        Aspect="AspectFill"/>
                 </VerticalStackLayout>
             </Frame>
-            <VerticalStackLayout HorizontalOptions="CenterAndExpand">
-                <Label Text="INFORMACJE O ZAWODNIKU"
+            <VerticalStackLayout 
+                HorizontalOptions="CenterAndExpand">
+                <HorizontalStackLayout 
+                    Spacing="40">
+                    <VerticalStackLayout>
+                        <Label Text="PEŁNE INFORMACJE"
                        FontAttributes="Bold"/>
-                <CheckBox HorizontalOptions="Center"
+                        <CheckBox HorizontalOptions="Center"
                           IsChecked="{Binding DetailsVisible}"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout IsVisible="{Binding NotesVisible}">
+                        <Label Text="USUWANIE NOTATEK"
+                       FontAttributes="Bold"/>
+                        <CheckBox HorizontalOptions="Center"
+                          IsChecked="{Binding DeleteNoteVisible}"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
                 <VerticalStackLayout IsVisible="{Binding DetailsVisible}">
                     <Label 
                         Text="Waga (kg)"/>
@@ -105,19 +115,34 @@
                         <DataTemplate 
                         x:DataType="model:Note">
                             <Frame
-                            Margin="0,5,0,5"
-                            CornerRadius="0"
-                            BorderColor="WhiteSmoke">
-                                <HorizontalStackLayout>
+                                    Margin="0,5,0,5"
+                                    Padding="10"
+                                    CornerRadius="0"
+                                    BorderColor="WhiteSmoke">
+                                <HorizontalStackLayout
+                                    Spacing="5">
                                     <Label 
                                     Text="{Binding InsertedDate, StringFormat='{}{0:dd.MM.yyyy HH:mm}'}"
                                     Margin="0,0,10,0"
                                     VerticalTextAlignment="Center"/>
                                     <Label 
-                                    MaximumWidthRequest="220"
-                                    Text="{Binding NoteFromTheCoach}"
-                                    LineBreakMode="WordWrap"
-                                    MaxLines="0"/>
+                                        MaximumWidthRequest="{Binding WidthNote,
+                                        Source={RelativeSource AncestorType={x:Type vm:FighterDetailsViewModel}}}"
+                                        MinimumWidthRequest="{Binding WidthNote,
+                                        Source={RelativeSource AncestorType={x:Type vm:FighterDetailsViewModel}}}"
+                                        Text="{Binding NoteFromTheCoach}"
+                                        LineBreakMode="WordWrap"
+                                        MaxLines="0"
+                                        VerticalOptions="Center"/>
+                                    <Button 
+                                            Text="USUŃ"
+                                        TextColor="Red"
+                                            IsVisible="{Binding DeleteNoteVisible,
+                                        Source={RelativeSource AncestorType={x:Type vm:FighterDetailsViewModel}}}"
+                                            Margin="10,0,0,0"
+                                            Command="{Binding DeleteNoteCommand, 
+                                        Source={RelativeSource AncestorType={x:Type vm:FighterDetailsViewModel}}}"
+                                            CommandParameter="{Binding Id}"/>
                                 </HorizontalStackLayout>
                             </Frame>
                         </DataTemplate>

@@ -10,114 +10,118 @@
             <Setter Property="MaximumWidthRequest" Value="200"/>
         </Style>
     </ContentPage.Resources>
-    
 
-    <VerticalStackLayout
+    <ScrollView>
+        <VerticalStackLayout
         Margin="0,10,0,0">
-        <ActivityIndicator 
+            <ActivityIndicator 
             IsVisible="{Binding IsBusy}"
             Margin="0,50,0,0"
             HeightRequest="100"
             WidthRequest="100"
             IsRunning="True"/>
-        <VerticalStackLayout 
+            <VerticalStackLayout 
             IsVisible="{Binding IsNotBusy}">
-            <Label 
+                <Label 
                 Text="IMIĘ"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-            <Entry 
+                <Entry 
                 Text="{Binding Name}"/>
 
-            <Label 
+                <Label 
                 Text="NAZWISKO"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-            <Entry 
+                <Entry 
                 Text="{Binding Surname}"/>
 
-            <Label 
+                <Label 
                 Text="KSYWA"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-            <Entry 
+                <Entry 
                 Text="{Binding Nickname}"/>
 
-            <Label 
+                <Label 
                 Text="WAGA"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-            <Entry 
+                <Entry 
                 Text="{Binding Weight}"
                 Keyboard="Numeric"/>
 
-            <Label 
+                <Label 
                 Text="ROK URODZENIA"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-            <Entry 
+                <Entry 
                 Text="{Binding BirthYear}"
                 Keyboard="Numeric"/>
 
-            <Label 
+                <Label 
                 Text="ROK ROZPOCZĘCIA TRENINGÓW"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-            <Entry 
+                <Entry 
                 Text="{Binding FirstShowUpYear}"
                 Keyboard="Numeric"/>
 
-            <Label 
+                <Label 
                 Text="ZDJĘCIE"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" 
                 Margin="0,0,0,10"/>
-            <Button 
+                <Button 
                 Text="WYBIERZ ZDJĘCIE"
                 HorizontalOptions="Center"
                 Command="{Binding PickPhotoCommand}" />
-            <Image 
+                <Image 
                 Source="{Binding SelectedImagePath}" 
                 WidthRequest="50" 
                 HeightRequest="50" 
                 Margin="0,10,0,10"
                 Aspect="AspectFit" />
 
-            <Label 
+                <Label 
                 Text="PAS"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-            <Picker 
+                <Picker 
                 WidthRequest="125"
                 VerticalOptions="Center"
                 SelectedItem="{Binding Belt}"
                 ItemsSource="{Binding BeltsList}"/>
 
-            <Label 
+                <Label 
                 Text="BELKI"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-            <Picker 
+                <Picker 
                 WidthRequest="125"
                 VerticalOptions="Center"
                 SelectedItem="{Binding Stripe}"
                 ItemsSource="{Binding StripeList}"/>
 
-            <Label 
+                <Label 
                 Text="WSTĘPNA NOTATKA"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-            <Editor 
+                <Editor 
                 WidthRequest="350"
                 AutoSize="TextChanges"
                 Text="{Binding Note}"/>
-            <Button
+                <Button
                 Text="DODAJ"
+                    TextColor="LightGreen"
+                    
                 FontAttributes="Bold"
                 Margin="10"
                 HorizontalOptions="Center"
                 IsVisible="{Binding IsNotBusy}"
                 Command="{Binding AddFighterCommand}"/>
+            </VerticalStackLayout>
         </VerticalStackLayout>
-    </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
 	<rect width="100%" height="100%" fill="white"/>
-	<text x="50%" y="40%" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="central" font-weight="bold">
-		ZŁOMIARZ
-	</text>
-	<text x="50%" y="58%" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="central" font-weight="bold">
-		TEAM
-	</text>
-	<text x="50%" y="76%" font-family="Arial" font-size="14" fill="black" text-anchor="middle" alignment-baseline="central" font-weight="bold">
-		APP
-	</text>
+	<!-- Pas BJJ (czarny pas) -->
+	<rect x="5" y="45" width="90" height="10" fill="black"/>
+
+	<!-- Część z miejscem na belki (czerwony kolor) -->
+	<rect x="72" y="45" width="15" height="10" fill="red"/>
+
+	<!-- Miejsce na belki (białe prostokąty na czerwonym tle) -->
+	<rect x="75" y="45" width="3" height="10" fill="white"/>
+	<rect x="81" y="45" width="3" height="10" fill="white"/>
 </svg>

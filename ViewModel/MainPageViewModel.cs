@@ -37,6 +37,7 @@ namespace FightClub.ViewModel
         public Command GetFightersCommand { get; }
         public Command GoToFightersDetailsCommand { get; }
         public Command GoToAddFighterCommand { get; }
+        public Command GoToEditFighterCommand { get; }
         public Command FindFightersByNameCommand { get; }
         public Command FindFightersBySurnameCommand { get; }
         public Command FindFightersByNicknameCommand { get; }
@@ -50,6 +51,7 @@ namespace FightClub.ViewModel
             GetFightersCommand = new Command(async () => await GetFightersAsync());
             GoToFightersDetailsCommand = new Command<Fighter>(async (fighter) => await GoToFighterDetailsAsync(fighter));
             GoToAddFighterCommand = new Command(async () => await GoToAddFighterAsync());
+            GoToEditFighterCommand = new Command<Fighter>(async (fighter) => await GoToEditFighterAsync(fighter));
             FindFightersByNameCommand = new Command(async () => await GetFightersByNameAsync());
             FindFightersBySurnameCommand = new Command(async () => await GetFightersBySurnameAsync());
             FindFightersByNicknameCommand = new Command(async () => await GetFightersByNicknameAsync());
@@ -240,10 +242,16 @@ namespace FightClub.ViewModel
         }
         private async Task GoToAddFighterAsync()
         {
-            var c = $"{nameof(AddFighterPage)}";
-            
             await Shell.Current.GoToAsync($"{nameof(AddFighterPage)}", true,
                 new Dictionary<string,object>());
+        }
+        private async Task GoToEditFighterAsync(Fighter fighter)
+        {
+            await Shell.Current.GoToAsync($"{nameof(EditFighterPage)}", true,
+                new Dictionary<string, object>()
+                {
+                    {"Fighter", fighter}
+                });
         }
         public async Task GetFightersAsync()
         {

@@ -169,30 +169,33 @@ namespace FightClub.ViewModel
 
         private async Task PickPhotoAsync()
         {
-            try
+            if (!IsBusy)
             {
-                IsBusy = true;
-                FileResult photo = await MediaPicker.PickPhotoAsync();
-
-                if (photo != null)
+                try
                 {
-                    var filePath = Path.Combine(FileSystem.AppDataDirectory, photo.FileName);
-                    using (var stream = await photo.OpenReadAsync())
-                    using (var newStream = File.OpenWrite(filePath))
-                        await stream.CopyToAsync(newStream);
+                    IsBusy = true;
+                    FileResult photo = await MediaPicker.PickPhotoAsync();
 
-                    SelectedImagePath = filePath;
+                    if (photo != null)
+                    {
+                        var filePath = Path.Combine(FileSystem.AppDataDirectory, photo.FileName);
+                        using (var stream = await photo.OpenReadAsync())
+                        using (var newStream = File.OpenWrite(filePath))
+                            await stream.CopyToAsync(newStream);
 
+                        SelectedImagePath = filePath;
+
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                // Obsługa błędów
-                await Application.Current.MainPage.DisplayAlert("Błąd", $"Nie udało się załadować zdjęcia: {ex.Message}", "OK");
-            }
-            finally
-            {
-                IsBusy = false;
+                catch (Exception ex)
+                {
+                    // Obsługa błędów
+                    await Application.Current.MainPage.DisplayAlert("Błąd", $"Nie udało się załadować zdjęcia: {ex.Message}", "OK");
+                }
+                finally
+                {
+                    IsBusy = false;
+                }
             }
         }
         private async Task AddFigterAsync()

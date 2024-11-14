@@ -13,6 +13,44 @@ namespace FightClub.Services
             _db = new LiteDatabase(dbPath);
             _db.SeedFightersData();
         }
+
+        //CREATE
+        public async Task<bool> AddFighter(Fighter fighter, Note firstNote)
+        {
+            var result = false;
+            try
+            {
+                await Task.Run(() =>
+                {
+                    var id = _db.GetCollection<Fighter>("Fighter")
+                         .Insert(fighter);
+
+                    firstNote.IdFighter = id;
+
+                    var note = _db.GetCollection<Note>("Note")
+                        .Insert(firstNote);
+
+                    result = true;
+                });
+            }
+            catch (Exception)
+            {
+                result = false;
+            }
+            return result;
+
+        }
+        public async Task<bool> AddNoteToFighter(Note note, Fighter fighter)
+        {
+            var result = false;
+            await Task.Run(() =>
+            {
+                _db.GetCollection<Note>("Note").Insert(note);
+                result = true;
+            });
+            return result;
+        }
+        //READ
         public Task<Fighter> FindFighterById(int id)
         {
             throw new NotImplementedException();
@@ -23,7 +61,7 @@ namespace FightClub.Services
 
             await Task.Run(() =>
             {
-                if(nameInput is not null)
+                if (nameInput is not null)
                 {
                     string name = nameInput.Replace(" ", string.Empty)
                             .ToUpper();
@@ -125,31 +163,6 @@ namespace FightClub.Services
 
             return returnFighters;
         }
-        public async Task<bool> AddFighter(Fighter fighter, Note firstNote)
-        {
-            var result = false;
-            try
-            {
-                await Task.Run(() =>
-                {
-                    var id = _db.GetCollection<Fighter>("Fighter")
-                         .Insert(fighter);
-
-                    firstNote.IdFighter = id;
-                    
-                    var note = _db.GetCollection<Note>("Note")
-                        .Insert(firstNote);
-
-                    result = true;
-                });
-            }
-            catch (Exception)
-            {
-                result = false;
-            }
-            return result;
-
-        }
         public async Task<IEnumerable<Note>> GetNotesByFighterId(int fighterId)
         {
             var notes = new List<Note>();
@@ -159,12 +172,24 @@ namespace FightClub.Services
                 notes = _db.GetCollection<Note>("Note")
                 .Query()
                 .Where(x => x.IdFighter == fighterId)
-                .OrderByDescending(x=>x.InsertedDate)
+                .OrderByDescending(x => x.InsertedDate)
                 .ToList();
             });
 
             return notes;
         }
+        //UPDATE
+        public async Task<bool> UpdateFighter(Fighter fighter)
+        {
+            bool result = false;
+            await Task.Run(() =>
+            {
+                _db.GetCollection<Fighter>("Fighter").Update(fighter);
+                result = true;
+            });
+            return result;
+        }
+        //DELETE
         public async Task<bool> DeleteFighter(Fighter fighter)
         {
             var result = false;
@@ -175,15 +200,15 @@ namespace FightClub.Services
 
             return result;
         }
-
-        public async Task<bool> AddNoteToFighter(Note note, Fighter fighter)
+        public async Task<bool> DeleteNote(int idNote)
         {
+            var result = false;
             await Task.Run(() =>
             {
-
+                _db.GetCollection<Note>("Note").Delete(idNote);
+                result = true;
             });
-            _db.GetCollection<Note>("Note").Insert(note);
-            return true;
+            return result;
         }
     }
 }

@@ -10590,73 +10590,13 @@ namespace FightClub
 			public const int appicon = 2131558400;
 			
 			// aapt resource value: 0x7F0D0001
-			public const int appicon23 = 2131558401;
+			public const int appicon_background = 2131558401;
 			
 			// aapt resource value: 0x7F0D0002
-			public const int appicon23_background = 2131558402;
+			public const int appicon_foreground = 2131558402;
 			
 			// aapt resource value: 0x7F0D0003
-			public const int appicon23_foreground = 2131558403;
-			
-			// aapt resource value: 0x7F0D0004
-			public const int appicon23_round = 2131558404;
-			
-			// aapt resource value: 0x7F0D0005
-			public const int appicon3 = 2131558405;
-			
-			// aapt resource value: 0x7F0D0006
-			public const int appicon3_background = 2131558406;
-			
-			// aapt resource value: 0x7F0D0007
-			public const int appicon3_foreground = 2131558407;
-			
-			// aapt resource value: 0x7F0D0008
-			public const int appicon3_round = 2131558408;
-			
-			// aapt resource value: 0x7F0D0009
-			public const int appicon4 = 2131558409;
-			
-			// aapt resource value: 0x7F0D000A
-			public const int appicon4_background = 2131558410;
-			
-			// aapt resource value: 0x7F0D000B
-			public const int appicon4_foreground = 2131558411;
-			
-			// aapt resource value: 0x7F0D000C
-			public const int appicon4_round = 2131558412;
-			
-			// aapt resource value: 0x7F0D000D
-			public const int appicon54 = 2131558413;
-			
-			// aapt resource value: 0x7F0D000E
-			public const int appicon54_background = 2131558414;
-			
-			// aapt resource value: 0x7F0D000F
-			public const int appicon54_foreground = 2131558415;
-			
-			// aapt resource value: 0x7F0D0010
-			public const int appicon54_round = 2131558416;
-			
-			// aapt resource value: 0x7F0D0014
-			public const int appiconfg = 2131558420;
-			
-			// aapt resource value: 0x7F0D0015
-			public const int appiconfg_background = 2131558421;
-			
-			// aapt resource value: 0x7F0D0016
-			public const int appiconfg_foreground = 2131558422;
-			
-			// aapt resource value: 0x7F0D0017
-			public const int appiconfg_round = 2131558423;
-			
-			// aapt resource value: 0x7F0D0011
-			public const int appicon_background = 2131558417;
-			
-			// aapt resource value: 0x7F0D0012
-			public const int appicon_foreground = 2131558418;
-			
-			// aapt resource value: 0x7F0D0013
-			public const int appicon_round = 2131558419;
+			public const int appicon_round = 2131558403;
 			
 			static Mipmap()
 			{

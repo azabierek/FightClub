@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\dotnet_bot.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\dotnet_bot@2x.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\dotnet_bot@3x.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\adsq.JPEG" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\arrk.JPEG" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\black0.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\black1.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\black2.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\black3.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\black4.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\blue0.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\blue1.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\blue2.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\blue3.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\blue4.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\brown0.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\brown1.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\brown2.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\brown3.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\brown4.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\mini_logo.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\purple0.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\purple1.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\purple2.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\purple3.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\purple4.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\white0.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\white1.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\white2.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\white3.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\white4.png" />
+    <BundleResource Include="C:\Users\adrzab\source\repos\FightClub\obj\Release\net7.0-maccatalyst\resizetizer\r\Resources\zt.png" />
+    <BundleResource Include="obj\Release\net7.0-maccatalyst\resizetizer\f\OpenSans-Regular.ttf" />
+    <BundleResource Include="obj\Release\net7.0-maccatalyst\resizetizer\f\OpenSans-Semibold.ttf" />
+  </ItemGroup>
+</Project>

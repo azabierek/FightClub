@@ -1,8 +1,4 @@
 is_global = true
-build_property.EnableAotAnalyzer = 
-build_property.EnableSingleFileAnalyzer = 
-build_property.EnableTrimAnalyzer = false
-build_property.IncludeAllContentForSelfExtract = 
 build_property.TargetFramework = net7.0-ios
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -45,6 +41,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FightClub.View.AddFighterPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\AddFighterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\AddFighterPage.xaml
+
+[C:/Users/adrzab/source/repos/FightClub/View/EditFighterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FightClub.View.EditFighterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\EditFighterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\EditFighterPage.xaml
 
 [C:/Users/adrzab/source/repos/FightClub/View/FighterDetailsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

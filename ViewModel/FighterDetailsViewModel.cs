@@ -21,14 +21,30 @@ namespace FightClub.ViewModel
         }
 
         private FightClubRepository _repo;
+
+        private double minimumWidthNote;
         private Fighter fighter;
         private string beltImageString;
         private bool detailsVisible;
         private bool notesVisible;
+        private bool deleteNoteVisible;
+
         private List<Note> notes;
         public Command AddNoteToTheFighterCommand { get; }
+        public Command DeleteNoteCommand { get; }
 
+        public double WidthNote
+        {
+            get => minimumWidthNote;
+            set
+            {
+                if (minimumWidthNote == value)
+                    return;
 
+                minimumWidthNote = value;
+                OnPropertyChanged(nameof(WidthNote));
+            }
+        }
         public Fighter Fighter
         {
             get => fighter;
@@ -79,6 +95,23 @@ namespace FightClub.ViewModel
                 OnPropertyChanged(nameof(DetailsVisible));
             }
         }
+        public bool DeleteNoteVisible
+        {
+            get => deleteNoteVisible;
+            set
+            {
+                if (deleteNoteVisible == value)
+                    return;
+
+                if (value)
+                    WidthNote = 160;
+                else
+                    WidthNote = 190;
+
+                deleteNoteVisible = value;
+                OnPropertyChanged(nameof(DeleteNoteVisible));
+            }
+        }
         public List<Note> Notes
         {
             get => notes;
@@ -97,56 +130,84 @@ namespace FightClub.ViewModel
             _repo = repo;
 
             AddNoteToTheFighterCommand = new Command(async () => await AddNoteToTheFighterAsync());
+            DeleteNoteCommand = new Command<int>(async (idNote) => await DeleteNoteAsync(idNote));
 
             NotesVisible = true;
+            WidthNote = 180;
         }
 
-        private async Task AddNoteToTheFighterAsync()
-        {
-            IsBusy = true;
-            try
-            {
-                var insertedNote = await Shell.Current.DisplayPromptAsync("NOWA NOTATKA", $"Wpisz poniżej nową notatkę przypisaną do zawodnika: {Fighter.Name} {Fighter.Surname}", "OK", "ANULUJ", "Tutaj napisz ...");
-                
-                if (insertedNote == null)
-                    return;
-
-                if (insertedNote.Length > 5)
-                {
-                    Note note = new Note
-                    {
-                        IdFighter = Fighter.Id,
-                        InsertedDate = DateTime.Now,
-                        NoteFromTheCoach = insertedNote
-                    };
-
-                    if (await _repo.AddNoteToFighter(note, Fighter))
-                        await GetNotesAsync(Fighter.Id);
-                }
-                else
-                {
-                    await Shell.Current.DisplayAlert("Notatka zbyt krótka", "Minimalna długość notatki to 6 znaków.", "OK");
-                }
-            }
-            catch (Exception ex)
-            {
-                await Shell.Current.DisplayAlert("Błąd", "Nie udało się dodać notatki.", "OK");
-
-#if DEBUG
-                Console.WriteLine(ex.ToString());
-#endif
-            }
-            finally
-            {
-                IsBusy = false;
-            }
-
-
-        }
 
         private async Task GetNotesAsync(int fighterId)
         {
             Notes = await _repo.GetNotesByFighterId(fighterId) as List<Note>;
+        }
+        private async Task AddNoteToTheFighterAsync()
+        {
+            if (!IsBusy)
+            {
+                IsBusy = true;
+                try
+                {
+                    var insertedNote = await Shell.Current.DisplayPromptAsync("NOWA NOTATKA", $"Wpisz poniżej nową notatkę przypisaną do zawodnika: {Fighter.Name} {Fighter.Surname}", "OK", "ANULUJ", "Tutaj napisz ...");
+
+                    if (insertedNote == null)
+                        return;
+
+                    if (insertedNote.Length > 5)
+                    {
+                        Note note = new Note
+                        {
+                            IdFighter = Fighter.Id,
+                            InsertedDate = DateTime.Now,
+                            NoteFromTheCoach = insertedNote
+                        };
+
+                        if (await _repo.AddNoteToFighter(note, Fighter))
+                            await GetNotesAsync(Fighter.Id);
+                    }
+                    else
+                    {
+                        await Shell.Current.DisplayAlert("Notatka zbyt krótka", "Minimalna długość notatki to 6 znaków.", "OK");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await Shell.Current.DisplayAlert("Błąd", "Nie udało się dodać notatki.", "OK");
+
+#if DEBUG
+                    Console.WriteLine(ex.ToString());
+#endif
+                }
+                finally
+                {
+                    IsBusy = false;
+                }
+            }
+        }
+        private async Task DeleteNoteAsync(int idNote)
+        {
+            if (!IsBusy)
+            {
+                try
+                {
+                    if(await Shell.Current.DisplayAlert("USUWANIE", $"Czy na pewno chcesz usunąć notatkę?", "TAK", "NIE"))
+                    {
+                        IsBusy = true;
+                        if (await _repo.DeleteNote(idNote))
+                            await GetNotesAsync(Fighter.Id);
+                    }
+                }
+                catch (Exception ex)
+                {
+#if DEBUG
+                    Console.WriteLine(ex.ToString());
+#endif
+                }
+                finally
+                {
+                    IsBusy = false;
+                }
+            }
         }
         private string SetBeltImageString()
         {
