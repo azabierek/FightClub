@@ -47,7 +47,6 @@ jobs:
         xcrun simctl list devices
 
     # 6. Przywracanie zależności
->>>>>>> 9f27bc45e3787cbc29200d3d87b6728fbd0ba60b
     - name: Install dependencies
       run: |
         dotnet restore
