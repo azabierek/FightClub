@@ -37,17 +37,32 @@ jobs:
       run: |
         sudo xcode-select --install
 
-    # 5. Przywracanie zależności
+    # 5. Wypisanie wersji Xcode, dotnet i simctl dla diagnostyki
+    - name: Diagnostic info
+      run: |
+        echo "Xcode version:"
+        xcodebuild -version
+        echo "dotnet version:"
+        dotnet --version
+        echo "Simulators:"
+        xcrun simctl list devices
+
+    # 6. Przywracanie zależności
     - name: Install dependencies
       run: |
         dotnet restore
 
-    # 6. Budowanie aplikacji
+    # 7. Budowanie aplikacji
     - name: Build the application
       run: |
         dotnet build
 
-    # 8. Uruchomienie testów UI na symulatorze iPhone SE (2nd generation)
+    # 8. Uruchomienie testów jednostkowych
+    - name: Run unit tests
+      run: |
+        dotnet test  # Uruchamianie testów jednostkowych
+
+    # 9. Uruchomienie testów UI na symulatorze iPhone SE (2nd generation)
     - name: Run UI tests on iOS Simulator
       run: |
         xcodebuild -scheme "MyMauiApp" -destination 'platform=iOS Simulator,name=iPhone SE (2nd generation)' clean build
