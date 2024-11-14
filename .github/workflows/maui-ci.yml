@@ -32,11 +32,6 @@ jobs:
       run: |
         dotnet workload install maccatalyst  # Instalacja workloadu MacCatalyst
 
-    # 4. Instalacja narzędzi Xcode (w tym Command Line Tools)
-    - name: Install Xcode Command Line Tools
-      run: |
-        sudo xcode-select --install
-
     # 5. Wypisanie wersji Xcode, dotnet i simctl dla diagnostyki
     - name: Diagnostic info
       run: |
