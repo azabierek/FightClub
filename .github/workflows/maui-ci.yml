@@ -1,0 +1,35 @@
+name: Build and Test .NET MAUI App
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: macos-latest  # Użycie maszyny macOS
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7.0.x'  # Ustaw wersję .NET MAUI
+
+    - name: Install dependencies
+      run: |
+        dotnet restore
+
+    - name: Build the application
+      run: |
+        dotnet build
+
+    - name: Run UI tests on iOS Simulator
+      run: |
+        # Symulator iOS, zależnie od potrzeb, konfiguracja testów UI
+        xcodebuild -scheme "MyMauiApp" -destination 'platform=iOS Simulator,name=iPhone SE (2nd generation)' clean build
