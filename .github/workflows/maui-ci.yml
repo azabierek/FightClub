@@ -54,7 +54,7 @@ jobs:
     # 5. Budowanie aplikacji na iOS
     - name: Build the application for iOS
       run: |
-        dotnet build MyMauiApp.csproj -t:Build -f:net7.0-ios
+        dotnet build FightClub.csproj -t:Build -f:net7.0-ios
 
     # 6. Uruchamianie testów jednostkowych
     - name: Run unit tests
