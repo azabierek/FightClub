@@ -30,16 +30,6 @@ jobs:
         dotnet workload install maccatalyst  # Instalacja workloadu MacCatalyst
         dotnet workload install android  # Instalacja workloadu Android
 
-    - name: Install .NET MAUI MacCatalyst workload
-      run: |
-
-        dotnet workload install maccatalyst  # Instalacja workloadu MacCatalyst
-        dotnet workload install android  # Instalacja workloadu Android
-
-    # 4. Instalacja narzędzi .NET MAUI (dotnet-maui)
-    - name: Install .NET MAUI tools
-      run: |
-        dotnet tool install -g Microsoft.Maui  # Instalacja .NET MAUI Tools
 
     # 5. Wypisanie wersji Xcode, dotnet i simctl dla diagnostyki
     - name: Diagnostic info
