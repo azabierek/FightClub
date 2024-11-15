@@ -65,11 +65,6 @@ jobs:
         xcrun simctl list devices
         xcrun simctl bootstatus "iPhone SE (3rd generation)"
 
-    # 9. Dodanie źródła NuGet dla Microsoft MAUI
-    - name: Add NuGet source for Microsoft MAUI
-      run: |
-        dotnet nuget add source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-5/nuget/v3/index.json --name Microsoft
-
     # 10. Instalacja narzędzi do testów UI
     - name: Install UI testing tools
       run: |
