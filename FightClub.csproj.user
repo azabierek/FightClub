@@ -2,9 +2,9 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
-    <ActiveDebugFramework>net7.0-ios</ActiveDebugFramework>
-    <ActiveDebugProfile>Simulator</ActiveDebugProfile>
-    <SelectedPlatformGroup>Simulator</SelectedPlatformGroup>
+    <ActiveDebugFramework>net7.0-android33.0</ActiveDebugFramework>
+    <ActiveDebugProfile>pixel_5_-_api_33 (Android 13.0 - API 33)</ActiveDebugProfile>
+    <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
     <DefaultDevice>tablet_m-dpi_10_1in_-_api_28</DefaultDevice>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
