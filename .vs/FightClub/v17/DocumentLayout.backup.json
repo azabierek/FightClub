@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -115,9 +115,13 @@
               "IsPinned": true
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FightClub",
+              "Title": "FightClub.csproj",
               "DocumentMoniker": "C:\\Users\\adrzab\\source\\repos\\FightClub\\FightClub.csproj",
               "RelativeDocumentMoniker": "FightClub.csproj",
               "ToolTip": "C:\\Users\\adrzab\\source\\repos\\FightClub\\FightClub.csproj",
@@ -137,12 +141,7 @@
               "RelativeToolTip": "Seed\\SeedData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T11:56:46.078Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+              "WhenOpened": "2024-11-14T11:56:46.078Z"
             },
             {
               "$type": "Document",
