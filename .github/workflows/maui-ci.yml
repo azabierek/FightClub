@@ -65,14 +65,8 @@ jobs:
         xcrun simctl list devices
         xcrun simctl bootstatus "iPhone SE (3rd generation)"
 
-    # 10. Instalacja narzędzi do testów UI
-    - name: Install UI testing tools
-      run: |
-        dotnet tool install -g Microsoft.Maui.Cli
-        dotnet tool restore
-
-    # 11. Uruchomienie testów UI na symulatorze iPhone SE
+    # 9. Uruchomienie testów UI na symulatorze iPhone SE za pomocą dotnet test
     - name: Run UI tests on iOS Simulator
       run: |
-        # Uruchomienie testów na wybranym urządzeniu
-        dotnet maui test --target ios --device "iPhone SE (3rd generation)"
+        dotnet test FightClub.Tests/FightClub.Tests.csproj --filter FullyQualifiedName~TestName
+        # Możesz dodać filtr testów, jeśli chcesz uruchomić tylko określone testy
