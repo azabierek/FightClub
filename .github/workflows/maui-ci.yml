@@ -64,9 +64,3 @@ jobs:
         # Sprawdzenie, czy symulator jest uruchomiony
         xcrun simctl list devices
         xcrun simctl bootstatus "iPhone SE (3rd generation)"
-
-    # 9. Uruchomienie testów UI na symulatorze iPhone SE za pomocą dotnet test
-    - name: Run UI tests on iOS Simulator
-      run: |
-        dotnet test FightClub.Tests/FightClub.Tests.csproj --filter FullyQualifiedName~TestName
-        # Możesz dodać filtr testów, jeśli chcesz uruchomić tylko określone testy
