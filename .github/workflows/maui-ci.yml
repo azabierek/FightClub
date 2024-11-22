@@ -50,17 +50,18 @@ jobs:
       run: |
         dotnet build FightClub.csproj -t:Build -f:net7.0-ios
 
-    # 7. Uruchomienie symulatora iOS (np. iPhone SE)
-    - name: Boot iOS simulator
-      run: |
-        # Uruchomienie symulatora
-        xcrun simctl boot "iPhone SE (3rd generation)"  # Włączenie symulatora iPhone SE
-        # Daj trochę czasu na uruchomienie symulatora
-        sleep 60  # Zwiększenie czasu oczekiwania, jeśli potrzeba
+    - name: Publish the app for iOS
+      run: dotnet publish -c Release -f:net7.0-ios /p:Platform=iPhone /p:Configuration=Release
 
-    # 8. Sprawdzenie statusu symulatora przed testami
-    - name: Ensure simulator is running
+    - name: Create .ipa file for iOS
       run: |
-        # Sprawdzenie, czy symulator jest uruchomiony
-        xcrun simctl list devices
-        xcrun simctl bootstatus "iPhone SE (3rd generation)"
+        mkdir -p ${{ github.workspace }}/build/ios
+        cp -r ./bin/Release/net7.0-ios/publish/* ${{ github.workspace }}/build/ios/
+        cd ${{ github.workspace }}/build/ios/
+        zip -r app.ipa *
+    
+    - name: Upload IPA as Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: iOS-App
+        path: ${{ github.workspace }}/build/ios/app.ipa
