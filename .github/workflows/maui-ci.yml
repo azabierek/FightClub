@@ -61,7 +61,7 @@ jobs:
         zip -r app.ipa *
     
     - name: Upload IPA as Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: iOS-App
         path: ${{ github.workspace }}/build/ios/app.ipa
