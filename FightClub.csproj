@@ -87,6 +87,7 @@
 	  <None Remove="Contents\white4.png" />
 	  <None Remove="Photos\adsq.JPEG" />
 	  <None Remove="Photos\arrk.JPEG" />
+	  <None Remove="Photos\zt.png" />
 	  <None Remove="Resources\AppIcon\appicon.png" />
 	  <None Remove="Resources\Images\mini_logo.png" />
 	  <None Remove="Resources\Splash\splash.svg" />
@@ -118,6 +119,7 @@
 	  <MauiImage Include="Contents\white2.png" />
 	  <MauiImage Include="Contents\white3.png" />
 	  <MauiImage Include="Contents\white4.png" />
+	  <MauiImage Include="Photos\zt.png" />
 	</ItemGroup>
 
 	<ItemGroup>

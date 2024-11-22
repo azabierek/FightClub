@@ -26,7 +26,7 @@ namespace FightClub.Seed
                     Nickname = nicknames[random.Next(nicknames.Count)], 
                     Belt = (Belt)random.Next(0, 4),  
                     Stripe = (Stripe)random.Next(0, 4),
-                    //PhotoSource = "adsq.JPEG"
+                    PhotoSource = "zt.png"
                 });
             }
 
@@ -39,65 +39,68 @@ namespace FightClub.Seed
 
             var notes = db.GetCollection<Note>("Note");
             notes.DeleteAll();
-            
-            var Ads = new Fighter()
-            {
-                BirthYear = 1993,
-                FirstShowUpYear = 2022,
-                Name = "Adrian",
-                Surname = "Żabierek",
-                Weight = 95,
-                Nickname = "Adis",
-                Belt = Belt.Niebieski,
-                Stripe = Stripe.Zero,
-                PhotoSource = "adsq.JPEG"
-            };
-            var Arek = new Fighter()
-            {
-                BirthYear = 1993,
-                FirstShowUpYear = 2022,
-                Name = "Arkadiusz",
-                Surname = "Jaroszek",
-                Weight = 115,
-                Nickname = "Areczek",
-                Belt = Belt.Niebieski,
-                Stripe = Stripe.Zero,
-                PhotoSource = "arrk.JPEG"
-            };
 
-            var generatedFighters = GenerateFighters(30);
-            foreach (var fighter in generatedFighters)
-            {
-                fighters.Insert(fighter);
-            }
+            //var generatedFighters = GenerateFighters(30);
+            //foreach (var fighter in generatedFighters)
+            //    fighters.Insert(fighter);
 
-            var idAds = fighters.Insert(Ads);
-            var idArek = fighters.Insert(Arek);
+            //var Ads = new Fighter()
+            //{
+            //    BirthYear = 1993,
+            //    FirstShowUpYear = 2022,
+            //    Name = "Adrian",
+            //    Surname = "Żabierek",
+            //    Weight = 98,
+            //    Nickname = "Adis",
+            //    Belt = Belt.Niebieski,
+            //    Stripe = Stripe.Zero,
+            //    PhotoSource = "adsq.JPEG"
+            //};
+            //var Arek = new Fighter()
+            //{
+            //    BirthYear = 1993,
+            //    FirstShowUpYear = 2022,
+            //    Name = "Arkadiusz",
+            //    Surname = "Jaroszek",
+            //    Weight = 120,
+            //    Nickname = "Areczek",
+            //    Belt = Belt.Niebieski,
+            //    Stripe = Stripe.Zero,
+            //    PhotoSource = "arrk.JPEG"
+            //};
 
-            var noteAds1 = new Note()
-            {
-                InsertedDate = DateTime.Now.AddDays(-2),
-                NoteFromTheCoach = "Do poprawy rozpoczynanie walki.",
-                IdFighter = idAds
-            };
+            //var idAds = fighters.Insert(Ads);
+            //var idArek = fighters.Insert(Arek);
 
-            var noteAds2 = new Note()
-            {
-                InsertedDate = DateTime.Now.AddDays(-1),
-                NoteFromTheCoach = "Waleczne serce.",
-                IdFighter = idAds
-            };
+            //var noteAds1 = new Note()
+            //{
+            //    InsertedDate = DateTime.Now.AddDays(-2),
+            //    NoteFromTheCoach = "Do poprawy rozpoczynanie walki.",
+            //    IdFighter = idAds
+            //};
+            //var noteAds2 = new Note()
+            //{
+            //    InsertedDate = DateTime.Now.AddDays(-1),
+            //    NoteFromTheCoach = "Do poprawy ucieczki z taktarova.",
+            //    IdFighter = idAds
+            //};
+            //var noteArek1 = new Note()
+            //{
+            //    InsertedDate = DateTime.Now.AddHours(-20),
+            //    NoteFromTheCoach = "Dobrze się pokazał na XIX MP, doradzić poprawę siły, lub redukcję wagi.",
+            //    IdFighter = idArek
+            //};
+            //var noteArek2 = new Note()
+            //{
+            //    InsertedDate = DateTime.Now.AddHours(-20),
+            //    NoteFromTheCoach = "Dobre sweepy. Do poprawy motywacja.",
+            //    IdFighter = idArek
+            //};
 
-            var noteArek = new Note()
-            {
-                InsertedDate = DateTime.Now.AddHours(-20),
-                NoteFromTheCoach = "Dobre sweepy. Do poprawy motywacja.",
-                IdFighter = idArek
-            };
-
-            notes.Insert(noteAds1);
-            notes.Insert(noteAds2);
-            notes.Insert(noteArek);
+            //notes.Insert(noteAds1);
+            //notes.Insert(noteAds2);
+            //notes.Insert(noteArek1);
+            //notes.Insert(noteArek2);
         }
     }
 }

@@ -1,11 +1,6 @@
 ﻿using FightClub.Model;
 using FightClub.Services;
 using FightClub.Static;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace FightClub.ViewModel
@@ -225,6 +220,8 @@ namespace FightClub.ViewModel
                                         var collection = new List<Note>();
                                         collection.Add(coachNote);
 
+                                        var standardPath = Path.Combine(FileSystem.AppDataDirectory, "zt.png");
+
                                         Fighter fighter = new Fighter()
                                         {
                                             Name = Name.CapitalizeFirstLetter(),
@@ -235,7 +232,7 @@ namespace FightClub.ViewModel
                                             Stripe = Stripe,
                                             FirstShowUpYear = Convert.ToInt32(FirstShowUpYear),
                                             Weight = Convert.ToDouble(Weight),
-                                            PhotoSource = SelectedImagePath,
+                                            PhotoSource = SelectedImagePath == null ? standardPath : SelectedImagePath,
                                             //Notes = collection
                                         };
 

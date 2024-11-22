@@ -11,7 +11,7 @@ namespace FightClub.Services
         {
             var dbPath = Path.Combine(FileSystem.AppDataDirectory, "FightClub.db");
             _db = new LiteDatabase(dbPath);
-            _db.SeedFightersData();
+            //_db.SeedFightersData();
         }
 
         //CREATE
@@ -154,6 +154,7 @@ namespace FightClub.Services
             {
                 var fighters = _db.GetCollection<Fighter>("Fighter")
                     .Query()
+                    .OrderBy(x=>x.Surname)
                     .ToList();
 
                 foreach (var fighter in fighters)
