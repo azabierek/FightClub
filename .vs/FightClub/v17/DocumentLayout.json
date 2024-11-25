@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\adrzab\\source\\repos\\FightClub\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|c:\\users\\adrzab\\source\\repos\\fightclub\\view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|solutionrelative:view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|c:\\users\\adrzab\\source\\repos\\fightclub\\viewmodel\\fighterdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|solutionrelative:viewmodel\\fighterdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|c:\\users\\adrzab\\source\\repos\\fightclub\\repository\\fightclubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|solutionrelative:repository\\fightclubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|c:\\users\\adrzab\\source\\repos\\fightclub\\seed\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|solutionrelative:seed\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|c:\\users\\adrzab\\source\\repos\\fightclub\\viewmodel\\addfighterviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,10 +63,6 @@
       "RelativeMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|solutionrelative:view\\addfighterpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|c:\\users\\adrzab\\source\\repos\\fightclub\\view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|solutionrelative:view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|c:\\users\\adrzab\\source\\repos\\fightclub\\viewmodel\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61F2ED2F-C6F6-4C43-A385-E669309CF6C8}|FightClub.csproj|solutionrelative:viewmodel\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -86,11 +82,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FighterDetailsPage.xaml",
               "DocumentMoniker": "C:\\Users\\adrzab\\source\\repos\\FightClub\\View\\FighterDetailsPage.xaml",
               "RelativeDocumentMoniker": "View\\FighterDetailsPage.xaml",
@@ -99,18 +95,17 @@
               "ViewState": "AgIAAH0AAAAAAAAAAAAEwIQAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-09-18T07:23:33.189Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FighterDetailsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\adrzab\\source\\repos\\FightClub\\ViewModel\\FighterDetailsViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\FighterDetailsViewModel.cs",
               "ToolTip": "C:\\Users\\adrzab\\source\\repos\\FightClub\\ViewModel\\FighterDetailsViewModel.cs",
               "RelativeToolTip": "ViewModel\\FighterDetailsViewModel.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAIA1wGoAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-06T08:48:55.853Z",
               "IsPinned": true,
@@ -119,32 +114,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FightClub.csproj",
-              "DocumentMoniker": "C:\\Users\\adrzab\\source\\repos\\FightClub\\FightClub.csproj",
-              "RelativeDocumentMoniker": "FightClub.csproj",
-              "ToolTip": "C:\\Users\\adrzab\\source\\repos\\FightClub\\FightClub.csproj",
-              "RelativeToolTip": "FightClub.csproj",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAAAIcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-14T12:21:56.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "C:\\Users\\adrzab\\source\\repos\\FightClub\\Seed\\SeedData.cs",
-              "RelativeDocumentMoniker": "Seed\\SeedData.cs",
-              "ToolTip": "C:\\Users\\adrzab\\source\\repos\\FightClub\\Seed\\SeedData.cs",
-              "RelativeToolTip": "Seed\\SeedData.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAwwDkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T11:56:46.078Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -210,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FightClubRepository.cs",
               "DocumentMoniker": "C:\\Users\\adrzab\\source\\repos\\FightClub\\Repository\\FightClubRepository.cs",
               "RelativeDocumentMoniker": "Repository\\FightClubRepository.cs",
@@ -219,6 +188,32 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T09:14:02.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\adrzab\\source\\repos\\FightClub\\View\\MainPage.xaml",
+              "RelativeDocumentMoniker": "View\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\adrzab\\source\\repos\\FightClub\\View\\MainPage.xaml",
+              "RelativeToolTip": "View\\MainPage.xaml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-14T08:18:58.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FightClub.csproj",
+              "DocumentMoniker": "C:\\Users\\adrzab\\source\\repos\\FightClub\\FightClub.csproj",
+              "RelativeDocumentMoniker": "FightClub.csproj",
+              "ToolTip": "C:\\Users\\adrzab\\source\\repos\\FightClub\\FightClub.csproj",
+              "RelativeToolTip": "FightClub.csproj",
+              "ViewState": "AgIAAH4AAAAAAAAAAABBwIcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-14T12:21:56.892Z",
               "EditorCaption": ""
             },
             {
@@ -268,7 +263,7 @@
               "RelativeDocumentMoniker": "View\\EditFighterPage.xaml",
               "ToolTip": "C:\\Users\\adrzab\\source\\repos\\FightClub\\View\\EditFighterPage.xaml",
               "RelativeToolTip": "View\\EditFighterPage.xaml",
-              "ViewState": "AgIAAFQAAAAAAAAAAIBZwG8AAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAACBjwG8AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-11-14T08:07:19.836Z",
               "EditorCaption": ""
@@ -281,14 +276,14 @@
               "RelativeDocumentMoniker": "View\\AddFighterPage.xaml",
               "ToolTip": "C:\\Users\\adrzab\\source\\repos\\FightClub\\View\\AddFighterPage.xaml",
               "RelativeToolTip": "View\\AddFighterPage.xaml",
-              "ViewState": "AgIAADYAAAAAAAAAAIBZwE0AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAACBjwE0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-11-14T08:21:55.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "C:\\Users\\adrzab\\source\\repos\\FightClub\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "AppShell.xaml.cs",
@@ -301,20 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\adrzab\\source\\repos\\FightClub\\View\\MainPage.xaml",
-              "RelativeDocumentMoniker": "View\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\adrzab\\source\\repos\\FightClub\\View\\MainPage.xaml",
-              "RelativeToolTip": "View\\MainPage.xaml",
-              "ViewState": "AgIAAPgAAAAAAAAAAAAgwAsBAABiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-14T08:18:58.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "EditFighterPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\adrzab\\source\\repos\\FightClub\\View\\EditFighterPage.xaml.cs",
               "RelativeDocumentMoniker": "View\\EditFighterPage.xaml.cs",
@@ -327,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "MainPageViewModel.cs",
               "DocumentMoniker": "C:\\Users\\adrzab\\source\\repos\\FightClub\\ViewModel\\MainPageViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\MainPageViewModel.cs",
@@ -335,7 +317,8 @@
               "RelativeToolTip": "ViewModel\\MainPageViewModel.cs",
               "ViewState": "AgIAAOgAAAAAAAAAAAASwPwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T08:12:06.193Z"
+              "WhenOpened": "2024-11-14T08:12:06.193Z",
+              "EditorCaption": ""
             }
           ]
         }
