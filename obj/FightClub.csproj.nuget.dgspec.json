@@ -10,7 +10,7 @@
         "projectUniqueName": "C:\\Users\\adrzab\\source\\repos\\FightClub\\FightClub.csproj",
         "projectName": "FightClub",
         "projectPath": "C:\\Users\\adrzab\\source\\repos\\FightClub\\FightClub.csproj",
-        "packagesPath": "C:\\Users\\adrzab\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\adminAZ\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\adrzab\\source\\repos\\FightClub\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
@@ -18,7 +18,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\adrzab\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\adminAZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

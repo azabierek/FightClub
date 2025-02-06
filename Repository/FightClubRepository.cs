@@ -11,7 +11,7 @@ namespace FightClub.Services
         {
             var dbPath = Path.Combine(FileSystem.AppDataDirectory, "FightClub.db");
             _db = new LiteDatabase(dbPath);
-            //_db.SeedFightersData();
+            _db.SeedFightersData();
         }
 
         //CREATE
